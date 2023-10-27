@@ -425,7 +425,7 @@ do_delete_cmd(Opts, Cmd) ->
 
 %% HTML / HTTP functions
 do_post(Opts, Url, JSONParams) ->
-  {ok, {_, _, Host, Port, _, _}} = http_uri:parse(Url),
+  #{port := Port, scheme := _Scheme, path := _Path, host := Host} = uri_string:parse(Url),
   JSON = json:encode(JSONParams),
   Len  = length(JSON),
   request(Opts, post,
