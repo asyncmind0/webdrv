@@ -1,0 +1,11 @@
+%% src/webdrv.app.src
+{application, webdrv,
+ [
+  {description, "webdrv application"},
+  {vsn, "1.0"},
+  {modules, []},
+  {registered, []},
+  {applications, [kernel, stdlib]},
+  {env, []},
+  {runtime_dependencies, []}
+ ]}.
